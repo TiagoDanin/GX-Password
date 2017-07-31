@@ -23,22 +23,22 @@
 
 		<StackPanel Grid.Row="1" Padding="10">
 			<StackPanel Padding="0,5,0,10">
-				<TextBlock Text="Your New Password:" HorizontalAlignment="Left" Padding="2"/>
+				<TextBlock x:Uid="yourPass" Text="Your New Password:" HorizontalAlignment="Left" Padding="2"/>
 				<TextBox x:Name="P" Text=""/>
 			</StackPanel>
 			<StackPanel>
-				<TextBlock Text="Password Length:"/>
+				<TextBlock x:Uid="passLeng" Text="Password Length:"/>
 				<Slider x:Name="sLeng" Value="10" Maximum="50" Minimum="1"/>
 			</StackPanel>
 			<StackPanel Padding="3,0,3,6">
-				<TextBlock Text="Password Length:"/>
-				<ToggleSwitch x:Name="tsNumb" IsOn="True" OffContent="Disabled Numbers" OnContent="Enabled Numbers" Padding="2"/>
-				<ToggleSwitch x:Name="tsLett" IsOn="True" OffContent="Disabled Letters" OnContent="Enabled Letters" Padding="2"/>
-				<ToggleSwitch x:Name="tsSymb" OffContent="Disabled Symbols" OnContent="Enabled Symbols" Padding="2"/>
+				<TextBlock x:Uid="passOpt" Text="Password Option:"/>
+				<ToggleSwitch x:Uid="sTsNumb"  x:Name="tsNumb" IsOn="True" OffContent="Disabled Numbers" OnContent="Enabled Numbers" Padding="2"/>
+				<ToggleSwitch x:Uid="sTsLett"  x:Name="tsLett" IsOn="True" OffContent="Disabled Letters" OnContent="Enabled Letters" Padding="2"/>
+				<ToggleSwitch x:Uid="sTsSymb" x:Name="tsSymb" OffContent="Disabled Symbols" OnContent="Enabled Symbols" Padding="2"/>
 			</StackPanel>
 			<StackPanel Padding="0,5,0,10">
-				<Button x:Name="btOK" Content="Generate Password" HorizontalAlignment="Stretch" Padding="2" Margin="0,0,0,5" Click="btOK_click"/>
-				<Button x:Name="btClipboard" Content="Clipboard" HorizontalAlignment="Stretch" Padding="2" Click="btClipboard_click"/>
+				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" HorizontalAlignment="Stretch" Padding="2" Margin="0,0,0,5" Click="btOK_click"/>
+				<Button x:Uid="sBtClipboard" x:Name="btClipboard" Content="Clipboard" HorizontalAlignment="Stretch" Padding="2" Click="btClipboard_click"/>
 			</StackPanel>
 		</StackPanel>
 	</Grid>
