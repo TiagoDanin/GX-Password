@@ -5,8 +5,11 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.VoiceCommands;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechRecognition;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,7 +28,7 @@ namespace GX_Password
             this.Suspending += OnSuspending;
         }
 
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -33,7 +36,7 @@ namespace GX_Password
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-            Frame rootFrame = Window.Current.Content as Frame;
+			Frame rootFrame = Window.Current.Content as Frame;
 
             if (rootFrame == null)
             {
@@ -63,7 +66,24 @@ namespace GX_Password
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
-        private void OnSuspending(object sender, SuspendingEventArgs e)
+		protected override void OnActivated(IActivatedEventArgs args)
+		{
+			base.OnActivated(args);
+
+			if (args.Kind == ActivationKind.VoiceCommand)
+			{
+				var voiceCommandArgs = args as VoiceCommandActivatedEventArgs;
+
+				if (voiceCommandArgs != null)
+				{
+					SpeechRecognitionResult result = voiceCommandArgs.Result;
+
+					// ToDo: Do something with the result.
+				}
+			}
+		}
+
+		private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
             deferral.Complete();
