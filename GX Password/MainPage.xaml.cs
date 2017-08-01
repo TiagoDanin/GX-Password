@@ -19,7 +19,6 @@ using Windows.UI.ViewManagement;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.Core;
-using System.Security;
 
 namespace GX_Password
 {
@@ -53,24 +52,136 @@ namespace GX_Password
 			Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
 		}
 
-		private SecureString gen(int lenPass, bool text, bool numb, bool sym)
+		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
 		{
-			SecureString password = new SecureString();
+			string password = "";
+			int[] simiArray = new int[190];
 			Random ran = new Random();
 
 			for (int r = 0; r < lenPass;)
 			{
 				int random = ran.Next(33, 190);
-				byte[] b = { Convert.ToByte(random) };
-				char newChar = Convert.ToChar(Encoding.UTF8.GetString(b));
 
-				if (sym & random >= 33 & random <= 44)       { password.AppendChar(newChar); r++; }
-				if (sym & random >= 58 & random <= 64)       { password.AppendChar(newChar); r++; }
-				if (numb & random >= 49 & random <= 57)      { password.AppendChar(newChar); r++; }
-				if (text & random >= 65 & random <= 90)      { password.AppendChar(newChar); r++; }
-				if (text & random >= 97 & random <= 122)     { password.AppendChar(newChar); r++; }
+				if (simi) {
+					// b 98 6 54
+					if ((new List<int> { 98, 54 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 98, 54 }).Contains(element)))
+						{
+							simiArray[0] = random;
+						}
+						else
+						{
+							random = simiArray[0];
+						}
+					}
+					// c 99 C 67 ( 40 { 123 [ 91
+					if ((new List<int> { 99, 67, 40, 123, 91 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 99, 67, 40, 123, 91 }).Contains(element)))
+						{
+							simiArray[1] = random;
+						}
+						else
+						{
+							random = simiArray[1];
+						}
+					}
+					// g 103 q 113 9 57
+					if ((new List<int> { 103, 113, 57 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 103, 113, 57 }).Contains(element)))
+						{
+							simiArray[2] = random;
+						}
+						else
+						{
+							random = simiArray[2];
+						}
+					}
+					// l 108 L 76 i 105 I 73 | 124
+					if ((new List<int> { 108, 76, 105, 73, 124 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 108, 76, 105, 73, 124 }).Contains(element)))
+						{
+							simiArray[3] = random;
+						}
+						else
+						{
+							random = simiArray[3];
+						}
+					}
+					// O 79 o 111 0 48
+					if ((new List<int> { 79, 111, 48 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 79, 111, 48 }).Contains(element)))
+						{
+							simiArray[4] = random;
+						}
+						else
+						{
+							random = simiArray[4];
+						}
+					}
+					// S 83 s 115 5 53
+					if ((new List<int> { 83, 115, 53 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 83, 115, 53 }).Contains(element)))
+						{
+							simiArray[5] = random;
+						}
+						else
+						{
+							random = simiArray[5];
+						}
+					}
+					// V 86 v 118 U 85 u 117
+					if ((new List<int> { 86, 118, 85, 117 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 86, 118, 85, 117 }).Contains(element)))
+						{
+							simiArray[6] = random;
+						}
+						else
+						{
+							random = simiArray[6];
+						}
+					}
+					// Z 90 z 122 2 50
+					if ((new List<int> { 90, 122, 50 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 90, 122, 50 }).Contains(element)))
+						{
+							simiArray[7] = random;
+						}
+						else
+						{
+							random = simiArray[7];
+						}
+					}
+					// W 87 w 119 V 86 v 118
+					if ((new List<int> { 87, 119, 86, 118 }).Contains(random))
+					{
+						if (!Array.Exists(simiArray, element => (new List<int> { 87, 119, 86, 118 }).Contains(element)))
+						{
+							simiArray[8] = random;
+						}
+						else
+						{
+							random = simiArray[8];
+						}
+					}
+				}
+
+				byte[] b = { Convert.ToByte(random) };
+				string newChar = Convert.ToString(Encoding.UTF8.GetString(b));
+
+				if (sym && random >= 33 && random <= 44)       { password += newChar; r++; }
+				if (sym && random >= 58 && random <= 64)       { password += newChar; r++; }
+				if (numb && random >= 49 && random <= 57)      { password += newChar; r++; }
+				if (text && random >= 65 && random <= 90)      { password += newChar; r++; }
+				if (text && random >= 97 && random <= 122)     { password += newChar; r++; }
 			}
-			password.MakeReadOnly();
 
 			return password;
 		}
@@ -84,10 +195,10 @@ namespace GX_Password
 
 		private void btOK_click(object sender, RoutedEventArgs e)
 		{
-			if (tsLett.IsOn == false & tsNumb.IsOn == false & tsSymb.IsOn == false) {
+			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false) {
 				P.Text = "";
 			} else {
-				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn).ToString();
+				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn);
 			}
 		}
 	}

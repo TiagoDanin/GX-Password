@@ -35,6 +35,7 @@
 				<ToggleSwitch x:Uid="sTsNumb"  x:Name="tsNumb" IsOn="True" OffContent="Disabled Numbers" OnContent="Enabled Numbers" Padding="2"/>
 				<ToggleSwitch x:Uid="sTsLett"  x:Name="tsLett" IsOn="True" OffContent="Disabled Letters" OnContent="Enabled Letters" Padding="2"/>
 				<ToggleSwitch x:Uid="sTsSymb" x:Name="tsSymb" OffContent="Disabled Symbols" OnContent="Enabled Symbols" Padding="2"/>
+				<ToggleSwitch x:Uid="sTsSimi" x:Name="tsSimi" OffContent="Disabled Similar Characters" OnContent="Enabled Similar Characters" Padding="2"/>
 			</StackPanel>
 			<StackPanel Padding="0,5,0,10">
 				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" HorizontalAlignment="Stretch" Padding="2" Margin="0,0,0,5" Click="btOK_click"/>
