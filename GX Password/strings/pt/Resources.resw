@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DescApp" xml:space="preserve">
+    <value>Um gerador de senhas Rápido, Fácil e Seguro</value>
+  </data>
   <data name="passLeng.Text" xml:space="preserve">
     <value>Tamanho da Senha:</value>
   </data>
@@ -130,22 +133,28 @@
     <value>Gerar Senha</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Desabilitado Letras</value>
+    <value>Letras Desabilitados</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Habilitado Letras</value>
+    <value>Letras Habilitados</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Desabilitado Números</value>
+    <value>Números Desabilitados</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Habilitado Números</value>
+    <value>Números Habilitados</value>
+  </data>
+  <data name="sTsSemi.OffContent" xml:space="preserve">
+    <value>Caracteres Semelhantes Desabilitados</value>
+  </data>
+  <data name="sTsSimi.OnContent" xml:space="preserve">
+    <value>Caracteres Semelhantes Habilitados</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Desabilitado Símbolos</value>
+    <value> Símbolos Desabilitados</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Habilitado Símbolos</value>
+    <value>Símbolos Habilitados</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
     <value>Sua Nova Senha:</value>
