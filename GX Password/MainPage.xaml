@@ -7,7 +7,7 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d">
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" SizeChanged="MainChanged">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="*" />
@@ -17,7 +17,7 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-		<StackPanel Grid.Row="0" Background="{ThemeResource SystemControlForegroundAccentBrush}" Padding="10">
+		<StackPanel x:Name="sp" Grid.Row="0" Background="{ThemeResource SystemControlForegroundAccentBrush}" Padding="10" Visibility="Visible">
 			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom"/>
 		</StackPanel>
 

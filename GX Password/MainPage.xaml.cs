@@ -19,6 +19,7 @@ using Windows.UI.ViewManagement;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.Core;
+using Windows.System.Profile;
 
 namespace GX_Password
 {
@@ -200,6 +201,19 @@ namespace GX_Password
 			} else {
 				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn);
 			}
+		}
+
+		private void MainChanged(object sender, SizeChangedEventArgs e)
+		{
+			if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop"){
+				if(UIViewSettings.GetForCurrentView().UserInteractionMode == Windows.UI.ViewManagement.UserInteractionMode.Touch)
+				{
+					sp.Visibility = Windows.UI.Xaml.Visibility.Visible;
+				} else {
+					sp.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+				}
+			}
+
 		}
 	}
 }

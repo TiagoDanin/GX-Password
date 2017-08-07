@@ -28,7 +28,7 @@ namespace GX_Password
             this.Suspending += OnSuspending;
         }
 
-        protected async override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)

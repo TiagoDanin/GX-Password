@@ -144,7 +144,7 @@
   <data name="sTsNumb.OnContent" xml:space="preserve">
     <value>Habilitados Números</value>
   </data>
-  <data name="sTsSemi.OffContent" xml:space="preserve">
+  <data name="sTsSimi.OffContent" xml:space="preserve">
     <value>Habilitados Caracteres similares</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
