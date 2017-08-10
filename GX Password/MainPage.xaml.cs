@@ -191,7 +191,7 @@ namespace GX_Password
 		{
 			var dataPackage = new DataPackage();
 			dataPackage.SetText(P.Text);
-			Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(dataPackage);
+			Clipboard.SetContent(dataPackage);
 		}
 
 		private void btOK_click(object sender, RoutedEventArgs e)
@@ -205,14 +205,6 @@ namespace GX_Password
 
 		private void MainChanged(object sender, SizeChangedEventArgs e)
 		{
-			if (AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Desktop"){
-				if(UIViewSettings.GetForCurrentView().UserInteractionMode == Windows.UI.ViewManagement.UserInteractionMode.Touch)
-				{
-					sp.Visibility = Windows.UI.Xaml.Visibility.Visible;
-				} else {
-					sp.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-				}
-			}
 
 		}
 	}

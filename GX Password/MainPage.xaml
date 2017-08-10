@@ -17,7 +17,7 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-		<StackPanel x:Name="sp" Grid.Row="0" Background="{ThemeResource SystemControlForegroundAccentBrush}" Padding="10" Visibility="Visible">
+		<StackPanel Grid.Row="0" Background="{ThemeResource SystemControlForegroundAccentBrush}" Padding="10" Visibility="Visible">
 			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom"/>
 		</StackPanel>
 
