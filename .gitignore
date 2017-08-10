@@ -406,3 +406,4 @@ __pycache__/
 
 ### VisualStudio Patch ###
 build/
+_*.appx
