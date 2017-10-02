@@ -11,6 +11,7 @@ Windows 10 and Windows 10 Mobile
 # Translations
 - PT by [Tiago](https://github.com/TiagoDanin) and [Wesley](https://github.com/Synk0)
 - ES by [Wesley](https://github.com/Synk0)
+- RU by [Daniel](https://github.com/dhavdc)
 
 ## LICENSE
 GNU GENERAL PUBLIC LICENSE V3 [(GPLv3)](https://github.com/TiagoDanin/GX-Password/blob/master/LICENSE)
