@@ -15,6 +15,8 @@ Windows 10 and Windows 10 Mobile
 - TH by [Aime](https://github.com/AimeTPGM)
 - PL by [Piotr Blazejewicz](https://github.com/peterblazejewicz)
 - NL by [Tom](https://github.com/TomG777)
+- DE by [Yikal](https://github.com/Yikal)
+- UA by [Marusyk](https://github.com/Marusyk)
 
 ## LICENSE
 GNU GENERAL PUBLIC LICENSE V3 [(GPLv3)](https://github.com/TiagoDanin/GX-Password/blob/master/LICENSE)
