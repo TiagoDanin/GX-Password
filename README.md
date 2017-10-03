@@ -14,6 +14,7 @@ Windows 10 and Windows 10 Mobile
 - RU by [Daniel](https://github.com/dhavdc)
 - TH by [Aime](https://github.com/AimeTPGM)
 - PL by [Piotr Blazejewicz](https://github.com/peterblazejewicz)
+- NL by [Tom](https://github.com/TomG777)
 - DE by [Yikal](https://github.com/Yikal)
 - UA by [Marusyk](https://github.com/Marusyk)
 
