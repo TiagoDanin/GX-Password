@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>Быстрый, простой и обеспеченный генератор паролей</value>
+    <value>Быстрый, простой и безопасный генератор паролей</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
     <value>Длина пароля:</value>
@@ -127,34 +127,34 @@
     <value>Параметры пароля:</value>
   </data>
   <data name="sBtClipboard.Content" xml:space="preserve">
-    <value>буфер обмена</value>
+    <value>Буфер обмена</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
     <value>Создать пароль</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Отключенные буквы</value>
+    <value>Отключены буквы</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Включенные буквы</value>
+    <value>Включены буквы</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Отключенные номера</value>
+    <value>Отключены цифры</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Включенные номера</value>
+    <value>Включены цифры</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Отключенные похожие символы</value>
+    <value>Отключены похожие символы</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Включенные похожие символы</value>
+    <value>Включены похожие символы</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Отключенные символы</value>
+    <value>Отключены символы</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Включенные символы</value>
+    <value>Включены символы</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
     <value>Ваш новый пароль:</value>
