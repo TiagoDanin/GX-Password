@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>Быстрый, простой и безопасный генератор паролей</value>
+    <value>Ein schneller, einfacher und sicherer Passwort-Generator</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
-    <value>Длина пароля:</value>
+    <value>Passwortlänge:</value>
   </data>
   <data name="passOpt.Text" xml:space="preserve">
-    <value>Параметры пароля:</value>
+    <value>Passwort-Optionen:</value>
   </data>
   <data name="sBtClipboard.Content" xml:space="preserve">
-    <value>Буфер обмена</value>
+    <value>Zwischenablage</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
-    <value>Создать пароль</value>
+    <value>Passwort generieren</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Отключены буквы</value>
+    <value>Buchstaben deaktiviert</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Включены буквы</value>
+    <value>Buchstaben aktiviert</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Отключены цифры</value>
+    <value>Nummern deaktiviert</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Включены цифры</value>
+    <value>Nummern aktiviert</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Отключены похожие символы</value>
+    <value>Ähnliche Zeichen deaktiviert</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Включены похожие символы</value>
+    <value>Ähnliche Zeichen aktiviert</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Отключены символы</value>
+    <value>Symbole deaktiviert</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Включены символы</value>
+    <value>Symbole aktiviert</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
-    <value>Ваш новый пароль:</value>
+    <value>Das neue Passwort:</value>
   </data>
 </root>
