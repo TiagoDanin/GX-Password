@@ -154,7 +154,7 @@
     <value>Symbolen Uitgeschakeld</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>DSymbolen Uitgeschakeld</value>
+    <value>Symbolen Ingeschakeld</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
     <value>Uw Nieuwe Wachtwoord:</value>
