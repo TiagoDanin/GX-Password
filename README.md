@@ -20,6 +20,7 @@ Windows 10 and Windows 10 Mobile
 - UA by [Marusyk](https://github.com/Marusyk)
 - SY by [Liambagge](https://github.com/liambagge)
 - FR by [Erickgirard](https://github.com/erickgirard)
+- HE by [Yotam Salmon](https://github.com/yotam180)
 
 ## LICENSE
 GNU GENERAL PUBLIC LICENSE V3 [(GPLv3)](https://github.com/TiagoDanin/GX-Password/blob/master/LICENSE)
