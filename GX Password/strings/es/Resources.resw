@@ -133,28 +133,28 @@
     <value>Generar Contraseña</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Deshabilitados Letras</value>
+    <value>Letras Deshabilitadas</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Habilitados Letras</value>
+    <value>Letras Habilitadas</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Deshabilitados Números</value>
+    <value>Números Deshabilitados</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Habilitados Números</value>
+    <value>Números Habilitados</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Habilitados Caracteres similares</value>
+    <value>Caracteres similares Habilitados</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Deshabilitados Caracteres similares</value>
+    <value>Caracteres similares Deshabilitados</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Deshabilitados Símbolos</value>
+    <value>Símbolos Deshabilitados</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Habilitados Símbolos</value>
+    <value>Símbolos Habilitados</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
     <value>Su Nueva Contraseña:</value>
