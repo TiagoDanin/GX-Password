@@ -33,13 +33,13 @@ namespace GX_Password
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
-//#if DEBUG
-//            if (System.Diagnostics.Debugger.IsAttached)
-//            {
-//                this.DebugSettings.EnableFrameRateCounter = true;
-//            }
-//#endif
-			Frame rootFrame = Window.Current.Content as Frame;
+#if DEBUG
+            if (System.Diagnostics.Debugger.IsAttached)
+            {
+                this.DebugSettings.EnableFrameRateCounter = true;
+            }
+#endif
+            Frame rootFrame = Window.Current.Content as Frame;
 
             if (rootFrame == null)
             {
@@ -62,12 +62,6 @@ namespace GX_Password
                 }
                 Window.Current.Activate();
             }
-
-
-            CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-            ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
-            titleBar.ButtonBackgroundColor = Colors.Transparent;
-            titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
         }
 
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
