@@ -7,7 +7,11 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d">
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" SizeChanged="MainChanged">
+    <Page.Resources>
+        <ResourceDictionary Source="FluentDesignDictionary.xaml" />
+    </Page.Resources>
+
+    <Grid Background="{StaticResource MainAcrylicBrush}" SizeChanged="MainChanged">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="*" />
@@ -17,14 +21,15 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-		<StackPanel Grid.Row="0" Background="{ThemeResource SystemControlForegroundAccentBrush}" Padding="10" Visibility="Visible">
-			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom"/>
+		<StackPanel Grid.Row="0" Padding="10" Visibility="Visible">
+			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom"
+                       Style="{ThemeResource CaptionTextBlockStyle}" />
 		</StackPanel>
 
 		<StackPanel Grid.Row="1" Padding="10">
 			<StackPanel Padding="0,5,0,10">
 				<TextBlock x:Uid="yourPass" Text="Your New Password:" HorizontalAlignment="Left" Padding="2"/>
-				<TextBox x:Name="P" Text=""/>
+				<TextBox x:Name="P" Text="" FocusVisualPrimaryBrush="{ThemeResource SystemControlBackgroundAltMediumBrush}"  />
 			</StackPanel>
 			<StackPanel>
 				<TextBlock x:Uid="passLeng" Text="Password Length:"/>
@@ -32,14 +37,14 @@
 			</StackPanel>
 			<StackPanel Padding="3,0,3,6">
 				<TextBlock x:Uid="passOpt" Text="Password Option:"/>
-				<ToggleSwitch x:Uid="sTsNumb"  x:Name="tsNumb" IsOn="True" OffContent="Disabled Numbers" OnContent="Enabled Numbers" Padding="2"/>
-				<ToggleSwitch x:Uid="sTsLett"  x:Name="tsLett" IsOn="True" OffContent="Disabled Letters" OnContent="Enabled Letters" Padding="2"/>
+				<ToggleSwitch x:Uid="sTsNumb" x:Name="tsNumb" IsOn="True" OffContent="Disabled Numbers" OnContent="Enabled Numbers" Padding="2"/>
+				<ToggleSwitch x:Uid="sTsLett" x:Name="tsLett" IsOn="True" OffContent="Disabled Letters" OnContent="Enabled Letters" Padding="2"/>
 				<ToggleSwitch x:Uid="sTsSymb" x:Name="tsSymb" OffContent="Disabled Symbols" OnContent="Enabled Symbols" Padding="2"/>
 				<ToggleSwitch x:Uid="sTsSimi" x:Name="tsSimi" OffContent="Disabled Similar Characters" OnContent="Enabled Similar Characters" Padding="2"/>
 			</StackPanel>
 			<StackPanel Padding="0,5,0,10">
-				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" HorizontalAlignment="Stretch" Padding="2" Margin="0,0,0,5" Click="btOK_click"/>
-				<Button x:Uid="sBtClipboard" x:Name="btClipboard" Content="Clipboard" HorizontalAlignment="Stretch" Padding="2" Click="btClipboard_click"/>
+				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" Style="{StaticResource btnStyle}" Click="btOK_click"/>
+                <Button x:Uid="sBtClipboard" x:Name="btClipboard" Content="Clipboard" Style="{StaticResource btnStyle}" Click="btClipboard_click"/>
 			</StackPanel>
 		</StackPanel>
 	</Grid>
