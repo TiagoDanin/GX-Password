@@ -43,17 +43,24 @@ namespace GX_Password
 			}
 			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
 			{
-				var titleBar = ApplicationView.GetForCurrentView().TitleBar;
-				if (titleBar != null)
-				{
-					titleBar.ButtonBackgroundColor = colorBar.Color;
-					titleBar.BackgroundColor = colorBar.Color;
-				}
-			}
+				ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;				
+
+                if (ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
+                {
+                    CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+                    titleBar.ButtonBackgroundColor = Colors.Transparent;
+                    titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+                }
+                else if (titleBar != null)
+                {
+                    titleBar.ButtonBackgroundColor = colorBar.Color;
+                    titleBar.BackgroundColor = colorBar.Color;
+                }
+            }
 			Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
 		}
 
-		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
+        private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
 		{
 			string password = "";
 			int[] simiArray = new int[190];
