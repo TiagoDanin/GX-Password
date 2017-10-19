@@ -6,6 +6,7 @@
 ## Store
 Windows 10 and Windows 10 Mobile
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d3f4797406496a8eddd4a4ecb31141)](https://www.codacy.com/app/tiagodanin/GX-Password?utm_source=github.com&utm_medium=referral&utm_content=TiagoDanin/GX-Password&utm_campaign=badger)
 [![Windows Store](https://assets.windowsphone.com/f2f77ec7-9ba9-4850-9ebe-77e366d08adc/English_Get_it_Win_10_InvariantCulture_Default.png)](https://www.microsoft.com/store/apps/9p6dqd7thb09)
 
 # Translations
