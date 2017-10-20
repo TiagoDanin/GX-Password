@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>En snabb, enkel och säker lösenordsgenererare!</value>
+    <value>En snabb, enkel och säker lösenordsgenerator!</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
     <value>Lösenordslängd:</value>
@@ -133,25 +133,25 @@
     <value>Generera lösenord</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Avaktiverade bokstäver</value>
+    <value>Inaktiverade bokstäver</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
     <value>Aktiverade bokstäver</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Avaktiverade nummer</value>
+    <value>Inaktiverade nummer</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
     <value>Aktiverade nummer</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Avaktiverade liknande tecken</value>
+    <value>Inaktiverade liknande tecken</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
     <value>Aktiverade liknande tecken</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Avaktiverade symboler</value>
+    <value>Inaktiverade symboler</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
     <value>Aktiverade symboler</value>
