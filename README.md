@@ -23,6 +23,7 @@ Windows 10 and Windows 10 Mobile
 - HE by [Yotam Salmon](https://github.com/yotam180)
 - IT by [Oldmammuth](https://github.com/oldmammuth)
 - ID by [Emhaye](https://github.com/emhaye)
+- FI by [Matias Kainulainen](https://github.com/mkainula)
 
 ## LICENSE
 GNU GENERAL PUBLIC LICENSE V3 [(GPLv3)](https://github.com/TiagoDanin/GX-Password/blob/master/LICENSE)
