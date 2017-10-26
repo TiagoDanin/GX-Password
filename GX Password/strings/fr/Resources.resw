@@ -130,7 +130,7 @@
     <value>Copier</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
-    <value>Générer mot de passe</value>
+    <value>Générer un mot de passe</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
     <value>Lettres désactivées</value>
