@@ -6,7 +6,7 @@
 		
 		<ResourceDictionary.ThemeDictionaries>
 				<ResourceDictionary x:Key="Light">
-						<!--https://docs.microsoft.com/es-mx/windows/uwp/style/acrylic#custom-acrylic-brush-->
+						<!--https://docs.microsoft.com/es-us/windows/uwp/style/acrylic#custom-acrylic-brush-->
 						<W10FCU:AcrylicBrush x:Key="MainAcrylicBrush"                          
 													BackgroundSource="HostBackdrop"
 													TintColor="#66FFFFFF"

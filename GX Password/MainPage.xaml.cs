@@ -20,6 +20,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.Core;
 using Windows.System.Profile;
+using Windows.Storage;
 
 namespace GX_Password
 {
@@ -31,7 +32,30 @@ namespace GX_Password
 		public MainPage()
 		{
 			this.InitializeComponent();
-			var colorBar = Application.Current.Resources["SystemControlForegroundAccentBrush"] as SolidColorBrush;
+   ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+
+   if (AppSettings.Values.ContainsKey("tsLett"))
+   {
+	tsLett.IsOn = (bool)AppSettings.Values["tsLett"];
+   }
+   if (AppSettings.Values.ContainsKey("tsNumb"))
+   {
+	tsNumb.IsOn = (bool)AppSettings.Values["tsNumb"];
+   }
+   if (AppSettings.Values.ContainsKey("tsSymb"))
+   {
+	tsSymb.IsOn = (bool)AppSettings.Values["tsSymb"];
+   }
+   if (AppSettings.Values.ContainsKey("tsSimi"))
+   {
+	tsSimi.IsOn = (bool)AppSettings.Values["tsSimi"];
+   }
+   if (AppSettings.Values.ContainsKey("sLeng"))
+   {
+	sLeng.Value = (double)AppSettings.Values["sLeng"];
+   }
+
+   var colorBar = Application.Current.Resources["SystemControlForegroundAccentBrush"] as SolidColorBrush;
 			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
 			{
 				var statusBar = StatusBar.GetForCurrentView();
@@ -48,8 +72,8 @@ namespace GX_Password
 				if (titleBar != null && ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
 				{
 					CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-					titleBar.ButtonBackgroundColor = Colors.Transparent;
-					titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+				    titleBar.ButtonBackgroundColor = Colors.Transparent;
+	 titleBar.ButtonInactiveBackgroundColor = colorBar.Color;
 				}
 				else if (titleBar != null)
 				{
@@ -203,12 +227,21 @@ namespace GX_Password
 
 		private void btOK_click(object sender, RoutedEventArgs e)
 		{
+
 			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false) {
 				P.Text = "";
 			} else {
 				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn);
 			}
-		}
+
+			ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+			AppSettings.Values["tsLett"] = tsLett.IsOn;
+			AppSettings.Values["tsNumb"] = tsNumb.IsOn;
+            AppSettings.Values["tsSymb"] = tsSymb.IsOn;
+            AppSettings.Values["tsSimi"] = tsSimi.IsOn;
+			AppSettings.Values["sLeng"] = sLeng.Value;
+
+  }
 
 		private void MainChanged(object sender, SizeChangedEventArgs e)
 		{
