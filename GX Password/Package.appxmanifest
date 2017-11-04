@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="8772TiagoDanin.GXPassword" Publisher="CN=F8F77939-4BED-43C9-BEDA-FB652F18621B" Version="1.3.2.0" />
+  <Identity Name="8772TiagoDanin.GXPassword" Publisher="CN=F8F77939-4BED-43C9-BEDA-FB652F18621B" Version="1.3.6.0" />
   <mp:PhoneIdentity PhoneProductId="65e6642e-bc29-405f-a7d1-dc8cf31bcaaa" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>GX Password</DisplayName>

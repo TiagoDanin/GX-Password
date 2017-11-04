@@ -57,6 +57,15 @@ namespace GX_Password
 				sLeng.Value = (double)AppSettings.Values["sLeng"];
 			}
 
+			string deviceFamilyVersion = AnalyticsInfo.VersionInfo.DeviceFamilyVersion;
+			ulong osVersion = ulong.Parse(deviceFamilyVersion);
+			int build = Convert.ToInt32((osVersion & 0x00000000FFFF0000L) >> 16);
+			if (build >= 16299)
+			{
+				P.Text = $"{build}";
+				bgMain.Background = Resources["SystemControlAccentAcrylicWindowAccentMediumHighBrush"] as Brush;
+			}
+
 			var colorBar = Application.Current.Resources["SystemControlForegroundAccentBrush"] as SolidColorBrush;
 			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
 			{
@@ -71,13 +80,13 @@ namespace GX_Password
 			{
 				ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
-				if (titleBar != null && ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
+				if (titleBar != null && ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase") && build >= 16299)
 				{
 					CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
 					titleBar.ButtonBackgroundColor = Colors.Transparent;
 					titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
 				}
-				else if (titleBar != null)
+				else if (titleBar != null && ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
 				{
 					titleBar.ButtonBackgroundColor = colorBar.Color;
 					titleBar.BackgroundColor = colorBar.Color;
@@ -246,8 +255,6 @@ namespace GX_Password
 			AppSettings.Values["tsSymb"] = tsSymb.IsOn;
 			AppSettings.Values["tsSimi"] = tsSimi.IsOn;
 			AppSettings.Values["sLeng"] = sLeng.Value;
-
-
 		}
 
 		private void MainChanged(object sender, SizeChangedEventArgs e)
