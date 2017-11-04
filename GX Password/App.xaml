@@ -1,8 +1,6 @@
 ﻿<Application
 	x:Class="GX_Password.App"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:local="using:GX_Password"
-	RequestedTheme="Light">
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
 </Application>

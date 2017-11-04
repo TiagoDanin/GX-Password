@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -20,6 +20,8 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.DataTransfer;
 using Windows.ApplicationModel.Core;
 using Windows.System.Profile;
+using Windows.Storage;
+using System.Runtime;
 
 namespace GX_Password
 {
@@ -31,6 +33,30 @@ namespace GX_Password
 		public MainPage()
 		{
 			this.InitializeComponent();
+
+			ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+
+			if (AppSettings.Values.ContainsKey("tsLett"))
+			{
+				tsLett.IsOn = (bool)AppSettings.Values["tsLett"];
+			}
+			if (AppSettings.Values.ContainsKey("tsNumb"))
+			{
+				tsNumb.IsOn = (bool)AppSettings.Values["tsNumb"];
+			}
+			if (AppSettings.Values.ContainsKey("tsSymb"))
+			{
+				tsSymb.IsOn = (bool)AppSettings.Values["tsSymb"];
+			}
+			if (AppSettings.Values.ContainsKey("tsSimi"))
+			{
+				tsSimi.IsOn = (bool)AppSettings.Values["tsSimi"];
+			}
+			if (AppSettings.Values.ContainsKey("sLeng"))
+			{
+				sLeng.Value = (double)AppSettings.Values["sLeng"];
+			}
+
 			var colorBar = Application.Current.Resources["SystemControlForegroundAccentBrush"] as SolidColorBrush;
 			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.StatusBar"))
 			{
@@ -43,24 +69,24 @@ namespace GX_Password
 			}
 			if (ApiInformation.IsTypePresent("Windows.UI.ViewManagement.ApplicationView"))
 			{
-				ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;				
+				ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
 
-                if (ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
-                {
-                    CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-                    titleBar.ButtonBackgroundColor = Colors.Transparent;
-                    titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
-                }
-                else if (titleBar != null)
-                {
-                    titleBar.ButtonBackgroundColor = colorBar.Color;
-                    titleBar.BackgroundColor = colorBar.Color;
-                }
-            }
+				if (titleBar != null && ApiInformation.IsTypePresent("Windows.UI.Xaml.Media.XamlCompositionBrushBase"))
+				{
+					CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
+					titleBar.ButtonBackgroundColor = Colors.Transparent;
+					titleBar.ButtonInactiveBackgroundColor = Colors.Transparent;
+				}
+				else if (titleBar != null)
+				{
+					titleBar.ButtonBackgroundColor = colorBar.Color;
+					titleBar.BackgroundColor = colorBar.Color;
+				}
+			}
 			Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
 		}
 
-        private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
+		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
 		{
 			string password = "";
 			int[] simiArray = new int[190];
@@ -70,7 +96,8 @@ namespace GX_Password
 			{
 				int random = ran.Next(33, 190);
 
-				if (simi) {
+				if (simi)
+				{
 					// b 98 6 54
 					if ((new List<int> { 98, 54 }).Contains(random))
 					{
@@ -184,11 +211,11 @@ namespace GX_Password
 				byte[] b = { Convert.ToByte(random) };
 				string newChar = Convert.ToString(Encoding.UTF8.GetString(b));
 
-				if (sym && random >= 33 && random <= 44)       { password += newChar; r++; }
-				if (sym && random >= 58 && random <= 64)       { password += newChar; r++; }
-				if (numb && random >= 49 && random <= 57)      { password += newChar; r++; }
-				if (text && random >= 65 && random <= 90)      { password += newChar; r++; }
-				if (text && random >= 97 && random <= 122)     { password += newChar; r++; }
+				if (sym && random >= 33 && random <= 44) { password += newChar; r++; }
+				if (sym && random >= 58 && random <= 64) { password += newChar; r++; }
+				if (numb && random >= 49 && random <= 57) { password += newChar; r++; }
+				if (text && random >= 65 && random <= 90) { password += newChar; r++; }
+				if (text && random >= 97 && random <= 122) { password += newChar; r++; }
 			}
 
 			return password;
@@ -203,11 +230,24 @@ namespace GX_Password
 
 		private void btOK_click(object sender, RoutedEventArgs e)
 		{
-			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false) {
+
+			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false)
+			{
 				P.Text = "";
-			} else {
+			}
+			else
+			{
 				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn);
 			}
+
+			ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
+			AppSettings.Values["tsLett"] = tsLett.IsOn;
+			AppSettings.Values["tsNumb"] = tsNumb.IsOn;
+			AppSettings.Values["tsSymb"] = tsSymb.IsOn;
+			AppSettings.Values["tsSimi"] = tsSimi.IsOn;
+			AppSettings.Values["sLeng"] = sLeng.Value;
+
+
 		}
 
 		private void MainChanged(object sender, SizeChangedEventArgs e)

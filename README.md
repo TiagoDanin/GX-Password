@@ -1,5 +1,5 @@
 ## GX Password
-[UWP] A Quick, Easy and Secure Password Generator
+[UWP] A Quick, Easy and Secure Password Generator [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d3f4797406496a8eddd4a4ecb31141)](https://www.codacy.com/app/tiagodanin/GX-Password?utm_source=github.com&utm_medium=referral&utm_content=TiagoDanin/GX-Password&utm_campaign=badger)
 
 ![GX Password](https://raw.githubusercontent.com/TiagoDanin/GX-Password/master/image.png "GX Password")
 
@@ -23,6 +23,7 @@ Windows 10 and Windows 10 Mobile
 - HE by [Yotam Salmon](https://github.com/yotam180)
 - IT by [Oldmammuth](https://github.com/oldmammuth)
 - ID by [Emhaye](https://github.com/emhaye)
+- FI by [Matias Kainulainen](https://github.com/mkainula)
 
 ## LICENSE
 GNU GENERAL PUBLIC LICENSE V3 [(GPLv3)](https://github.com/TiagoDanin/GX-Password/blob/master/LICENSE)

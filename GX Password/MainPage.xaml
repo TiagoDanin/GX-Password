@@ -1,4 +1,4 @@
-﻿<Page
+<Page
 	x:Class="GX_Password.MainPage"
 	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,11 +7,7 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	mc:Ignorable="d">
 
-    <Page.Resources>
-        <ResourceDictionary Source="FluentDesignDictionary.xaml" />
-    </Page.Resources>
-
-    <Grid Background="{StaticResource MainAcrylicBrush}" SizeChanged="MainChanged">
+	<Grid SizeChanged="MainChanged" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto" />
 			<RowDefinition Height="*" />
@@ -21,9 +17,8 @@
 			<ColumnDefinition Width="*" />
 		</Grid.ColumnDefinitions>
 
-		<StackPanel Grid.Row="0" Padding="10" Visibility="Visible">
-			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom"
-                       Style="{ThemeResource CaptionTextBlockStyle}" />
+		<StackPanel x:Name="bgMain" Grid.Row="0" Padding="10" Visibility="Visible" Background="{ThemeResource SystemControlAccentAcrylicWindowAccentMediumHighBrush}">
+			<TextBlock Text="GX Password" FontWeight="Bold" VerticalAlignment="Bottom" Style="{ThemeResource CaptionTextBlockStyle}" />
 		</StackPanel>
 
 		<StackPanel Grid.Row="1" Padding="10">
@@ -43,8 +38,8 @@
 				<ToggleSwitch x:Uid="sTsSimi" x:Name="tsSimi" OffContent="Disabled Similar Characters" OnContent="Enabled Similar Characters" Padding="2"/>
 			</StackPanel>
 			<StackPanel Padding="0,5,0,10">
-				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" Style="{StaticResource btnStyle}" Click="btOK_click"/>
-                <Button x:Uid="sBtClipboard" x:Name="btClipboard" Content="Clipboard" Style="{StaticResource btnStyle}" Click="btClipboard_click"/>
+				<Button x:Uid="sBtOk" x:Name="btOK" Content="Generate Password" HorizontalAlignment="Stretch" Padding="2" Margin="0,2,0,2" Click="btOK_click"/>
+				<Button x:Uid="sBtClipboard" x:Name="btClipboard" Content="Clipboard" HorizontalAlignment="Stretch" Padding="2" Margin="0,2,0,2" Click="btClipboard_click"/>
 			</StackPanel>
 		</StackPanel>
 	</Grid>

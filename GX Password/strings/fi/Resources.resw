@@ -118,45 +118,45 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>En snabb, enkel och säker lösenordsgenerator!</value>
+    <value>Nopea, helppo ja turvallinen salasanageneraattori</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
-    <value>Lösenordslängd:</value>
+    <value>Salasanan pituus:</value>
   </data>
   <data name="passOpt.Text" xml:space="preserve">
-    <value>Lösenordsinställning:</value>
+    <value>Salasanan optiot:</value>
   </data>
   <data name="sBtClipboard.Content" xml:space="preserve">
-    <value>Urklipp</value>
+    <value>Kopioi leikepöydälle</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
-    <value>Generera lösenord</value>
+    <value>Generoi salasana</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Inaktiverade bokstäver</value>
+    <value>Kirjaimet poissa käytöstä</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Aktiverade bokstäver</value>
+    <value>Kirjaimet käytössä</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Inaktiverade nummer</value>
+    <value>Numerot poissa käytöstä</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Aktiverade nummer</value>
+    <value>Numerot käytössä</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Inaktiverade liknande tecken</value>
+    <value>Samanlaiset merkit poissa käytöstä</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Aktiverade liknande tecken</value>
+    <value>Samanlaiset merkit käytössä</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Inaktiverade symboler</value>
+    <value>Symbolit poissa käytöstä</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Aktiverade symboler</value>
+    <value>Symbolit käytössä</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
-    <value>Ditt nya lösenord:</value>
+    <value>Uusi salasanasi:</value>
   </data>
 </root>
