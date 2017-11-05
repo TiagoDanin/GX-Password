@@ -62,7 +62,6 @@ namespace GX_Password
 			int build = Convert.ToInt32((osVersion & 0x00000000FFFF0000L) >> 16);
 			if (build >= 16299)
 			{
-				P.Text = $"{build}";
 				bgMain.Background = Resources["SystemControlAccentAcrylicWindowAccentMediumHighBrush"] as Brush;
 			}
 
