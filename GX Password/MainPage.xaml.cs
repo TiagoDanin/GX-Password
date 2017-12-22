@@ -102,7 +102,12 @@ namespace GX_Password
 
 			for (int r = 0; r < lenPass;)
 			{
-				int random = ran.Next(33, 190);
+				// Avoid using single and dobule quotes
+				// ASCII doble quote: 34
+				// ASCII single quite: 39
+				int random;
+   	do { random = ran.Next(33, 190); }
+	   while (random == 34 || random == 39);
 
 				if (simi)
 				{
