@@ -118,43 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>Nopea, helppo ja turvallinen salasanageneraattori</value>
+    <value>A Quick, Easy and Secure Password Generator</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
-    <value>Salasanan pituus:</value>
+    <value>Password Length:</value>
   </data>
   <data name="passOpt.Text" xml:space="preserve">
-    <value>Salasanan optiot:</value>
+    <value>Password Option:</value>
   </data>
   <data name="sBtClipboard.Content" xml:space="preserve">
-    <value>Kopioi leikepöydälle</value>
+    <value>Clipboard</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
-    <value>Generoi salasana</value>
+    <value>Generate Password</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Kirjaimet poissa käytöstä</value>
+    <value>Disabled Letters</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Kirjaimet käytössä</value>
+    <value>Enabled Letters</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Numerot poissa käytöstä</value>
+    <value>Disabled Numbers</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Numerot käytössä</value>
+    <value>Enabled Numbers</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Samanlaiset merkit poissa käytöstä</value>
+    <value>Disabled Similar Characters</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Samanlaiset merkit käytössä</value>
+    <value>Enabled Similar Characters</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Symbolit poissa käytöstä</value>
+    <value>Disabled Symbols</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Symbolit käytössä</value>
+    <value>Enabled Symbols</value>
   </data>
   <data name="sTsAdv.OffContent" xml:space="preserve">
     <value>DHidden Advanced Options</value>
@@ -181,6 +181,6 @@
     <value>Enabled Lowercase Letters</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
-    <value>Uusi salasanasi:</value>
+    <value>Your New Password:</value>
   </data>
 </root>
