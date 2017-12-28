@@ -1,5 +1,5 @@
 ## GX Password
-[UWP] A Quick, Easy and Secure Password Generator [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d3f4797406496a8eddd4a4ecb31141)](https://www.codacy.com/app/tiagodanin/GX-Password?utm_source=github.com&utm_medium=referral&utm_content=TiagoDanin/GX-Password&utm_campaign=badger)
+[UWP] A Quick, Easy and Secure Password Generator [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c7d3f4797406496a8eddd4a4ecb31141)](https://www.codacy.com/app/tiagodanin/GX-Password?utm_source=github.com&utm_medium=referral&utm_content=TiagoDanin/GX-Password&utm_campaign=badger) [![Crowdin](https://d322cqt584bo4o.cloudfront.net/gx-password/localized.svg)](https://crowdin.com/project/gx-password)
 
 [![GX Password](Screenshot/DESKTOP1.png "GX Password")](https://www.microsoft.com/store/apps/9p6dqd7thb09)
 
