@@ -108,7 +108,7 @@ namespace GX_Password
 					titleBar.BackgroundColor = colorBar.Color;
 				}
 			}
-			//Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
+			Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
 		}
 
 		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi, bool noFixQuotes, bool lettUp, bool lettDown)

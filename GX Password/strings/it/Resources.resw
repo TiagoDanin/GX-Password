@@ -157,7 +157,7 @@
     <value>Simboli abilitati</value>
   </data>
   <data name="sTsAdv.OffContent" xml:space="preserve">
-    <value>DHidden Advanced Options</value>
+    <value>Hidden Advanced Options</value>
   </data>
   <data name="sTsAdv.OnContent" xml:space="preserve">
     <value>Shows Advanced Options</value>

@@ -157,28 +157,28 @@
     <value>Símbolos Habilitados</value>
   </data>
   <data name="sTsAdv.OffContent" xml:space="preserve">
-    <value>DHidden Advanced Options</value>
+    <value>Oculta Opções Avançadas</value>
   </data>
   <data name="sTsAdv.OnContent" xml:space="preserve">
-    <value>Shows Advanced Options</value>
+    <value>Mostra Opções Avançadas</value>
   </data>
   <data name="sTsQuotes.OffContent" xml:space="preserve">
-    <value>Disabled Quotation Marks</value>
+    <value>Aspas Desabilitado</value>
   </data>
   <data name="sTsQuotes.OnContent" xml:space="preserve">
-    <value>Enabled Quotation Marks</value>
+    <value>Aspas Habilitado</value>
   </data>
   <data name="sTsLettUp.OffContent" xml:space="preserve">
-    <value>Disabled Uppercase Letters</value>
+    <value>Letras Maiúsculas Desabilitado</value>
   </data>
   <data name="sTsLettUp.OnContent" xml:space="preserve">
-    <value>Enabled Uppercase Letters</value>
+    <value>Letras Maiúsculas Habilitado</value>
   </data>
   <data name="sTsLettDown.OffContent" xml:space="preserve">
-    <value>Disabled Lowercase Letters</value>
+    <value>Letras Minúsculas Desabilitado</value>
   </data>
   <data name="sTsLettDown.OnContent" xml:space="preserve">
-    <value>Enabled Lowercase Letters</value>
+    <value>Letras Minúsculas Habilitado</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
     <value>Sua Nova Senha:</value>
