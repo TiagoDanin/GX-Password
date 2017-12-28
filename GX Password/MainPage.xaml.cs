@@ -25,7 +25,8 @@ using System.Runtime;
 
 namespace GX_Password
 {
-	//APP by Tiago Danin
+	//APP: GX Password
+	//Develops Tiago Danin & BaezCrdrm
 	//License GPLv3
 	//Based on Github:TiagoDanin/GenesiPassword
 	public sealed partial class MainPage : Page
@@ -51,6 +52,22 @@ namespace GX_Password
 			if (AppSettings.Values.ContainsKey("tsSimi"))
 			{
 				tsSimi.IsOn = (bool)AppSettings.Values["tsSimi"];
+			}
+			if (AppSettings.Values.ContainsKey("tsAdv"))
+			{
+				tsSimi.IsOn = (bool)AppSettings.Values["tsAdv"];
+			}
+			if (AppSettings.Values.ContainsKey("tsQuotes"))
+			{
+				tsSimi.IsOn = (bool)AppSettings.Values["tsQuotes"];
+			}
+			if (AppSettings.Values.ContainsKey("tsLettUp"))
+			{
+				tsSimi.IsOn = (bool)AppSettings.Values["tsLettUp"];
+			}
+			if (AppSettings.Values.ContainsKey("tsLettDown"))
+			{
+				tsSimi.IsOn = (bool)AppSettings.Values["tsLettDown"];
 			}
 			if (AppSettings.Values.ContainsKey("sLeng"))
 			{
@@ -91,10 +108,10 @@ namespace GX_Password
 					titleBar.BackgroundColor = colorBar.Color;
 				}
 			}
-			Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
+			//Windows.UI.ViewManagement.ApplicationView.GetForCurrentView().IsScreenCaptureEnabled = false;
 		}
 
-		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi)
+		private string gen(int lenPass, bool text, bool numb, bool sym, bool simi, bool noFixQuotes, bool lettUp, bool lettDown)
 		{
 			string password = "";
 			int[] simiArray = new int[190];
@@ -102,12 +119,14 @@ namespace GX_Password
 
 			for (int r = 0; r < lenPass;)
 			{
+				int random = ran.Next(33, 190);
+				bool checkOk = true;
 				// Avoid using single and dobule quotes
 				// ASCII doble quote: 34
 				// ASCII single quite: 39
-				int random;
-   	do { random = ran.Next(33, 190); }
-	   while (random == 34 || random == 39);
+				if (!noFixQuotes && (random == 34 || random == 39)) {
+					checkOk = false;
+				}
 
 				if (simi)
 				{
@@ -224,11 +243,11 @@ namespace GX_Password
 				byte[] b = { Convert.ToByte(random) };
 				string newChar = Convert.ToString(Encoding.UTF8.GetString(b));
 
-				if (sym && random >= 33 && random <= 44) { password += newChar; r++; }
-				if (sym && random >= 58 && random <= 64) { password += newChar; r++; }
-				if (numb && random >= 49 && random <= 57) { password += newChar; r++; }
-				if (text && random >= 65 && random <= 90) { password += newChar; r++; }
-				if (text && random >= 97 && random <= 122) { password += newChar; r++; }
+				if (checkOk && sym && random >= 33 && random <= 44)                { password += newChar; r++; }
+				if (checkOk && sym && random >= 58 && random <= 64)                { password += newChar; r++; }
+				if (checkOk && numb && random >= 49 && random <= 57)               { password += newChar; r++; }
+				if (checkOk && lettUp && text && random >= 65 && random <= 90)     { password += newChar; r++; }
+				if (checkOk && lettDown && text && random >= 97 && random <= 122)  { password += newChar; r++; }
 			}
 
 			return password;
@@ -244,13 +263,17 @@ namespace GX_Password
 		private void btOK_click(object sender, RoutedEventArgs e)
 		{
 
-			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false)
-			{
-				P.Text = "";
+			if (tsLett.IsOn == true && tsLettUp.IsOn == false && tsLettDown.IsOn == false) {
+				tsLettUp.IsOn = true;
+				tsLettDown.IsOn = true;
+			} else if (tsLettUp.IsOn == false && tsLettDown.IsOn == false) {
+				tsLett.IsOn = false;
 			}
-			else
-			{
-				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn);
+
+			if (tsLett.IsOn == false && tsNumb.IsOn == false && tsSymb.IsOn == false) {
+				P.Text = "";
+			} else {
+				P.Text = gen(Convert.ToInt16(sLeng.Value), tsLett.IsOn, tsNumb.IsOn, tsSymb.IsOn, tsSimi.IsOn, tsQuotes.IsOn, tsLettUp.IsOn, tsLettDown.IsOn);
 			}
 
 			ApplicationDataContainer AppSettings = ApplicationData.Current.LocalSettings;
@@ -258,12 +281,26 @@ namespace GX_Password
 			AppSettings.Values["tsNumb"] = tsNumb.IsOn;
 			AppSettings.Values["tsSymb"] = tsSymb.IsOn;
 			AppSettings.Values["tsSimi"] = tsSimi.IsOn;
+			AppSettings.Values["tsAdv"] = tsAdv.IsOn;
+			AppSettings.Values["tsQuotes"] = tsQuotes.IsOn;
+			AppSettings.Values["tsLettUp"] = tsLettUp.IsOn;
+			AppSettings.Values["tsLettDown"] = tsLettDown.IsOn;
 			AppSettings.Values["sLeng"] = sLeng.Value;
 		}
 
 		private void MainChanged(object sender, SizeChangedEventArgs e)
 		{
 
+		}
+
+		private void tsAdvCheck(object sender, RoutedEventArgs e)
+		{
+			if (tsAdv.IsOn)
+			{
+				spAdv.Visibility = Visibility.Visible;
+ 			} else {
+				spAdv.Visibility = Visibility.Collapsed;
+			}
 		}
 	}
 }
