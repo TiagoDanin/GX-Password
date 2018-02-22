@@ -118,43 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DescApp" xml:space="preserve">
-    <value>Ein schneller, einfacher und sicherer Passwort-Generator</value>
+    <value>Un generador de contraseñas Rápido, Fácil y Seguro</value>
   </data>
   <data name="passLeng.Text" xml:space="preserve">
-    <value>Passwortlänge:</value>
+    <value>Tamaño de la Contraseña:</value>
   </data>
   <data name="passOpt.Text" xml:space="preserve">
-    <value>Passwort-Optionen:</value>
+    <value>Opciones de la Contraseña:</value>
   </data>
   <data name="sBtClipboard.Content" xml:space="preserve">
-    <value>Zwischenablage</value>
+    <value>Copiar al Portapapeles</value>
   </data>
   <data name="sBtOk.Content" xml:space="preserve">
-    <value>Passwort generieren</value>
+    <value>Generar Contraseña</value>
   </data>
   <data name="sTsLett.OffContent" xml:space="preserve">
-    <value>Buchstaben deaktiviert</value>
+    <value>Letras Deshabilitadas</value>
   </data>
   <data name="sTsLett.OnContent" xml:space="preserve">
-    <value>Buchstaben aktiviert</value>
+    <value>Letras Habilitadas</value>
   </data>
   <data name="sTsNumb.OffContent" xml:space="preserve">
-    <value>Nummern deaktiviert</value>
+    <value>Números Deshabilitados</value>
   </data>
   <data name="sTsNumb.OnContent" xml:space="preserve">
-    <value>Nummern aktiviert</value>
+    <value>Números Habilitados</value>
   </data>
   <data name="sTsSimi.OffContent" xml:space="preserve">
-    <value>Ähnliche Zeichen deaktiviert</value>
+    <value>Caracteres similares Habilitados</value>
   </data>
   <data name="sTsSimi.OnContent" xml:space="preserve">
-    <value>Ähnliche Zeichen aktiviert</value>
+    <value>Caracteres similares Deshabilitados</value>
   </data>
   <data name="sTsSymb.OffContent" xml:space="preserve">
-    <value>Symbole deaktiviert</value>
+    <value>Símbolos Deshabilitados</value>
   </data>
   <data name="sTsSymb.OnContent" xml:space="preserve">
-    <value>Symbole aktiviert</value>
+    <value>Símbolos Habilitados</value>
   </data>
   <data name="sTsAdv.OffContent" xml:space="preserve">
     <value>Hidden Advanced Options</value>
@@ -181,6 +181,6 @@
     <value>Enabled Lowercase Letters</value>
   </data>
   <data name="yourPass.Text" xml:space="preserve">
-    <value>Das neue Passwort:</value>
+    <value>Su Nueva Contraseña:</value>
   </data>
 </root>
